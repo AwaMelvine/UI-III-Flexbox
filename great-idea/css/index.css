@@ -157,43 +157,41 @@ h5 {
   width: 80%;
   height: 80px;
   margin: 0px auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-bar .nav-menu {
-  display: inline-block;
-  width: 70%;
-  height: 100%;
   color: rgb(204, 204, 204);
+  flex: 7;
+  display: flex;
+  flex-direction: row;
 }
 .nav-bar .nav-menu li {
-  display: inline-block;
   height: 100%;
-  margin-right: -4px;
+  flex: 1;
 }
 .nav-bar .nav-menu li a {
   text-decoration: none;
   color: #c0c0c0;
   display: block;
-  padding: 30px 25px;
-  margin: 0px;
-  height: 100%;
+  padding: 35px 25px;
 }
 
 .nav-bar .logo-div {
-  width: 30%;
-  display: inline-block;
-  margin-right: -4px;
+  flex: 3;
 }
 .nav-bar .logo-div .logo {
   display: block;
-  margin: 0px auto;
-  height: 100%;
+  margin: 20px auto;
   line-height: 2em;
 }
 
 /* Main */
 main {
   margin: 0px 8em;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -202,14 +200,12 @@ main {
   width: 100%;
   border-bottom: 1px solid gray;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
 }
 .main-header .intro {
-  display: inline-block;
-  width: 50%;
-}
-
-.main-header .intro span {
-  display: block;
+  padding-top: 50px;
+  flex: 1;
 }
 
 .main-header .intro .intro-text {
@@ -220,8 +216,7 @@ main {
 }
 
 .main-header .intro-image-div {
-  display: inline-block;
-  width: 50%;
+  flex: 1;
   text-align: center;
   padding: 30px;
 }
@@ -238,19 +233,18 @@ main {
 
 /* Top section */
 .top-section {
-  width: 100%;
   margin-top: 35px;
+  display: flex;
+  flex-direction: row;
 }
 .top-section article {
-  display: inline-block;
-  width: 50%;
-  margin-right: -4px;
+  flex: 1;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 .top-section article:not(:first-child) {
-  padding-left: 35px;
+  margin-left: 35px;
 }
 .middle-img {
   margin-top: 35px;
@@ -262,16 +256,16 @@ main {
   margin-top: 35px;
   padding-bottom: 30px;
   border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: row;
 }
 
 .bottom-section article {
-  width: 33.3%;
-  margin-right: -4px;
-  display: inline-block;
+  flex: 1;
 }
 
 .bottom-section article:not(:first-child) {
-  padding-left: 35px;
+  margin-left: 35px;
 }
 
 /* Contact */
