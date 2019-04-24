@@ -348,6 +348,9 @@ footer {
 .services-footer {
   display: flex;
 }
+.services-footer article {
+  flex: 2;
+}
 .services-footer article ul {
   list-style-type: square;
   margin-top: 40px;
@@ -358,4 +361,5 @@ footer {
 }
 .services-footer .services-info-img {
   margin-left: 30px;
+  flex: 1;
 }
