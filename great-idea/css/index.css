@@ -3,64 +3,363 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* Your code starts here! */
+/* NavBar */
+.nav-bar {
+  margin: 0px 8em;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar .nav-menu {
+  color: rgb(204, 204, 204);
+  flex: 7;
+  display: flex;
+  flex-direction: row;
+}
+.nav-bar .nav-menu li {
+  height: 100%;
+  flex: 1;
+}
+.nav-bar .nav-menu li a {
+  text-decoration: none;
+  color: #c0c0c0;
+  display: block;
+  padding: 35px 25px;
+}
+
+.nav-bar .logo-div {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav-bar .logo-div .logo {
+  display: block;
+  display: flex;
+}
+
+/* Main */
+main {
+  margin: 0px 8em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+
+.main-header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.main-header .intro {
+  padding-top: 50px;
+  flex: 1;
+}
+
+.main-header .intro .intro-text {
+  font-size: 5em;
+  font-family: "Bangers", cursive;
+  text-align: center;
+  padding-left: 30px;
+}
+
+.main-header .intro-image-div {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+
+.main-header .intro-btn {
+  padding: 10px 30px;
+  width: 180px;
+  text-align: center;
+  margin-left: calc(50% - 70px);
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid gray;
+}
+
+/* Top section */
+.top-section {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+}
+.top-section article {
+  flex: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.top-section article:not(:first-child) {
+  margin-left: 35px;
+}
+.middle-img {
+  margin-top: 35px;
+  width: 100%;
+}
+
+/* Bottom section */
+.bottom-section {
+  margin-top: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+}
+
+.bottom-section article {
+  flex: 1;
+}
+
+.bottom-section article:not(:first-child) {
+  margin-left: 35px;
+}
+
+/* Contact */
+
+.contact {
+  margin-top: 35px;
+}
+.contact p {
+  margin: 15px auto;
+}
+
+/* Footer */
+footer {
+  padding: 50px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+/* SERVICES PAGE */
+/* Services Header */
+.services-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.services-header .services-header-img {
+  flex: 1;
+}
+.services-header .services-section {
+  flex: 1;
+  padding: 30px 0px 40px 0px;
+  text-align: justify;
+}
+
+.services-header .services-section h2 {
+  font-size: 1.6em;
+}
+
+/* Services Body */
+.services-body {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  margin: 35px auto;
+  padding-bottom: 30px;
+}
+.services-body div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 35px;
+}
+.services-body div article {
+  padding: 20px;
+  background: #f4f3f4;
+  border: 1px solid black;
+  padding-bottom: 30px;
+}
+.services-body div article:not(:first-child) {
+  margin-left: 3em;
+}
+
+.services-body div article p {
+  margin-bottom: 20px;
+}
+
+.services-body div article .learn-more-btn {
+  text-decoration: none;
+  color: #444;
+  background: white;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* Services Footer */
+.services-footer {
+  display: flex;
+}
+.services-footer article {
+  flex: 2;
+}
+.services-footer article ul {
+  list-style-type: square;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.services-footer article ul li {
+  margin: 10px auto;
+}
+.services-footer .services-info-img {
+  margin-left: 30px;
+  flex: 1;
+}
